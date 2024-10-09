@@ -1,0 +1,362 @@
+{
+	"apiVersion": "1",
+	"name": "grbb/business-review",
+	"title": "Business Review",
+	"description": "Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.",
+	"category": "widgets",
+	"keywords": [
+		"business",
+		"review",
+		"block"
+	],
+	"textdomain": "business-review",
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": ""
+		},
+		"cId": {
+			"type": "string",
+			"default": ""
+		},
+		"facebookCacheT": {
+			"type": "string",
+			"default": ""
+		},
+		"googleCacheT": {
+			"type": "string",
+			"default": ""
+		},
+		"yelpCacheT": {
+			"type": "string",
+			"default": ""
+		},
+		"sliderSettings": {
+			"type": "object",
+			"default": {
+				"initialSlide": 2,
+				"arrows": true,
+				"dots": false,
+				"infinite": false,
+				"slidesToScroll": 1,
+				"autoplay": false,
+				"autoplaySpeed": 2000,
+				"slidesToShow": 3,
+				"responsive": [
+					{
+						"breakpoint": 1024,
+						"settings": {
+							"slidesToShow": 3,
+							"slidesToScroll": 3,
+							"infinite": true,
+							"dots": true
+						}
+					},
+					{
+						"breakpoint": 600,
+						"settings": {
+							"slidesToShow": 2,
+							"slidesToScroll": 2,
+							"initialSlide": 2
+						}
+					},
+					{
+						"breakpoint": 480,
+						"settings": {
+							"slidesToShow": 1,
+							"slidesToScroll": 1
+						}
+					}
+				]
+			}
+		},
+		"showText": {
+			"type": "string",
+			"default": 50
+		},
+		"showBtnColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"showBtnHoverColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"isToast": {
+			"type": "boolean",
+			"default": false
+		},
+		"toastPosition": {
+			"type": "string",
+			"default": "bottom-left"
+		},
+		"toastAnimation": {
+			"type": "string",
+			"default": "Slide"
+		},
+		"toastDuration": {
+			"type": "string",
+			"default": 2000
+		},
+		"isReviewType": {
+			"type": "object",
+			"default": {
+				"google": true,
+				"facebook": true,
+				"yelp": true
+			}
+		},
+		"reviewPosition": {
+			"type": "object",
+			"default": {
+				"top": "google",
+				"middle": "facebook",
+				"bottom": "yelp"
+			}
+		},
+		"layout": {
+			"type": "string",
+			"default": "default"
+		},
+		"wrapperBgColor": {
+			"type": "object",
+			"default": {
+				"color": "#fff"
+			}
+		},
+		"isProfileImg": {
+			"type": "boolean",
+			"default": true
+		},
+		"isName": {
+			"type": "boolean",
+			"default": true
+		},
+		"isTime": {
+			"type": "boolean",
+			"default": true
+		},
+		"isIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"isRatting": {
+			"type": "boolean",
+			"default": true
+		},
+		"isDescription": {
+			"type": "boolean",
+			"default": true
+		},
+		"cardBackground": {
+			"type": "object",
+			"default": {
+				"color": "#00000012"
+			}
+		},
+		"cardPadding": {
+			"type": "object",
+			"default": {
+				"top": "20px",
+				"right": "20px",
+				"bottom": "20px",
+				"left": "20px"
+			}
+		},
+		"cardBorder": {
+			"type": "object",
+			"default": {
+				"color": "#e1e1e1",
+				"style": "solid",
+				"width": "1px"
+			}
+		},
+		"cardRadius": {
+			"type": "string",
+			"default": "5px"
+		},
+		"cardShadow": {
+			"type": "object",
+			"default": {}
+		},
+		"cardHoverShadow": {
+			"type": "object",
+			"default": {}
+		},
+		"secondaryBg": {
+			"type": "object",
+			"default": {
+				"type": "gradient",
+				"gradient": "linear-gradient(45deg, #643df3 0%, #9b3fd5 100%)"
+			}
+		},
+		"quoteIconColor": {
+			"type": "string",
+			"default": "rgb(255 255 255)"
+		},
+		"nameTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 17,
+					"tablet": 15,
+					"mobile": 15
+				},
+				"fontWeight": 600,
+				"lineHeight": "135%"
+			}
+		},
+		"nameColor": {
+			"type": "string",
+			"default": "#000"
+		},
+		"nameHoverColor": {
+			"type": "string",
+			"default": "#777"
+		},
+		"imgBgColor": {
+			"type": "string",
+			"default": "#fff"
+		},
+		"imgPadding": {
+			"type": "object",
+			"default": {
+				"top": "3px",
+				"right": "3px",
+				"bottom": "3px",
+				"left": "3px"
+			}
+		},
+		"imgBorder": {
+			"type": "object",
+			"default": {
+				"color": "#e1e1e1",
+				"style": "solid",
+				"width": "5px"
+			}
+		},
+		"imgRadius": {
+			"type": "string",
+			"default": "50%"
+		},
+		"imgShadow": {
+			"type": "object",
+			"default": {}
+		},
+		"timeColor": {
+			"type": "string",
+			"default": "#8c8c8c"
+		},
+		"timeTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 12,
+					"tablet": 12,
+					"mobile": 12
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"reviewTextColor": {
+			"type": "string",
+			"default": "#646464"
+		},
+		"reviewTextTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 16,
+					"tablet": 14,
+					"mobile": 14
+				},
+				"fontWeight": 400,
+				"lineHeight": "133%"
+			}
+		},
+		"ratingIconColors": {
+			"type": "object",
+			"default": {
+				"google": "#e7711b",
+				"facebook": "#485396",
+				"yelp": "#d32323"
+			}
+		},
+		"postedTextColor": {
+			"type": "string",
+			"default": "#60505080"
+		},
+		"postedTextTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 12,
+					"tablet": 12,
+					"mobile": 12
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"postedAuthorColor": {
+			"type": "string",
+			"default": "#197bff"
+		},
+		"postedAuthorTypo": {
+			"type": "object",
+			"default": {
+				"fontSize": {
+					"desktop": 14,
+					"tablet": 13,
+					"mobile": 13
+				},
+				"fontWeight": 400,
+				"lineHeight": "135%"
+			}
+		},
+		"wrapperPadding": {
+			"type": "object",
+			"default": {
+				"top": "20px",
+				"right": "20px",
+				"bottom": "20px",
+				"left": "20px"
+			}
+		},
+		"columns": {
+			"type": "object",
+			"default": {
+				"desktop": 3,
+				"tablet": 2,
+				"mobile": 1
+			}
+		},
+		"columnGap": {
+			"type": "string",
+			"default": "30px"
+		},
+		"rowGap": {
+			"type": "string",
+			"default": "40px"
+		}
+	},
+	"supports": {
+		"align": [
+			"wide",
+			"full"
+		],
+		"html": false
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"columns": {
+				"desktop": 1,
+				"tablet": 1,
+				"mobile": 1
+			}
+		}
+	},
+	"editorScript": "file:dist/editor.js"
+}
