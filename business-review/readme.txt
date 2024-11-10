@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews,facebook, google, yelp
 Requires at least: 5.4+
 Tested up to: 6.5.5
-Stable tag: 6.6.2 
+Stable tag: 6.6.2
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -13,7 +13,7 @@ Simple and easy way to display your Google, Facebook and Yelp business reviews i
  
 == Description ==
 
-👉 [Plugin Demo](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Get Pro Version](https://bplugins.com/products/business-reviews/) 👈
+👉 [Plugin Demo](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Get Pro Version](https://bplugins.com/products/business-reviews/#pricing) 👈
 
 Business Reviews is a powerful and easy-to-use plugin that allows you to display and embed your customers' reviews from Facebook Page, Google My Business, and Yelp directly on your WordPress website. With this plugin, you can showcase your reputation and build trust with your visitors, encouraging them to choose your business over your competitors.
 
