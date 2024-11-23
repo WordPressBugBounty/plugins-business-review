@@ -21,7 +21,7 @@ class BusinessReviewAPI
         add_action('wp_ajax_grbb_remove_cache', [$this, 'grbb_remove_cache']);
         $this->apiData = json_decode(get_option('grbb_apis'), true);
     }
-
+ 
     public function get_access_token()
     {
         if (!wp_verify_nonce(sanitize_text_field($_GET['nonce']), 'wp_rest')) {
