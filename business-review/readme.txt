@@ -4,16 +4,16 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, facebook, google, yelp
 Requires at least: 6.5+
 Tested up to: 6.7.1
-Stable tag: 1.0.9
+Stable tag: 1.0.10
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Simple and easy way to display your Google, Facebook and Yelp business reviews in your Posts and Pages. 
+Simple and easy way to display your Google, Facebook and Yelp business reviews in your Posts and Pages.
 
 == Description ==
 
-👉 [Plugin Demo](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Get Pro Version](https://bplugins.com/products/business-reviews/) 👈
+👉 [Plugin Demo](https://bplugins.com/products/business-reviews/#demos) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Get Pro Version](https://bplugins.com/products/business-reviews/#pricing) 👈
 
 Business Reviews is a powerful and easy-to-use plugin that allows you to display and embed your customers' reviews from Facebook Page, Google My Business, and Yelp directly on your WordPress website. With this plugin, you can showcase your reputation and build trust with your visitors, encouraging them to choose your business over your competitors.
 
@@ -159,6 +159,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.10 - 18 Dec, 2024 =
+* singleton patters implement
+
 = 1.0.9 - 23 Nov, 2024 =
 * _load_textdomain_just_in_time notice solved
 
@@ -192,6 +195,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.10 - 18 Dec, 2024 =
+* singleton patters implement
 
 = 1.0.9 - 23 Nov, 2024 =
 * _load_textdomain_just_in_time notice solved

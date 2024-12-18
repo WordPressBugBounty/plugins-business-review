@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Business Review
  * Description: Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.
- * Version: 1.0.9
+ * Version: 1.0.10
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -13,10 +13,6 @@
 // ABS PATH
 if (!defined('ABSPATH')) {exit;}
 
-// Constant
-define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.9' );
-define('GRBB_DIR', plugin_dir_url(__FILE__));
-define('GRBB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
 
 if (!function_exists('grbb_init')) {
     function grbb_init()
@@ -30,16 +26,77 @@ if (!function_exists('grbb_init')) {
     $grbb_bs->uninstall_plugin(__FILE__);
 }
 
-// Business Review
-class GRBBBusinessReview
-{
-    public function __construct()
+class GRBB_Business_Review {
+
+    private static $instance;
+
+    private function __construct()
     {
+        global $grbb_bs;
+        $this->define_constants();
+        $this->load_classes();
+
         add_action('enqueue_block_assets', [$this, 'enqueueBlockAssets']);
         add_action('init', [$this, 'onInit']);
         add_action('admin_enqueue_scripts', [$this, 'adminEnqueueScripts']);
         add_action('admin_init', [$this, 'register_my_setting']);
         add_action('rest_api_init', [$this, 'register_my_setting']);
+        add_filter('plugin_row_meta', array($this, 'insert_plugin_row_meta'), 10, 2);
+
+        if(!$grbb_bs->can_use_premium_feature()){
+            add_filter( 'plugin_action_links', [$this, 'plugin_action_links'], 10, 2 ); 
+        }
+    }
+
+    public function define_constants() {
+        define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.10' );
+        define('GRBB_DIR', plugin_dir_url(__FILE__));
+        define('GRBB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
+    }
+
+    public function plugin_action_links($links, $file) {
+        
+        if( plugin_basename( __FILE__ ) == $file ) {
+            $links['go_pro'] = sprintf( '<a href="%s" style="%s" target="__blank">%s</a>', 'https://bplugins.com/products/business-reviews/#pricing', 'color:#4527a4;font-weight:bold', __( 'Go Pro!', 'business-review' ) );
+        }
+
+        return $links;
+    }
+
+    // Extending row meta 
+    public function insert_plugin_row_meta($links, $file)
+    {
+        if (plugin_basename( __FILE__ ) == $file) {
+            // docs & faq
+            $links[] = sprintf('<a href="https://bplugins.com/docs/business-reviews" target="_blank">' . __('Docs & FAQs', 'business-review') . '</a>');
+
+            // Demos
+            $links[] = sprintf('<a href="https://bplugins.com/products/business-reviews/#demos" target="_blank">' . __('Demos', 'business-review') . '</a>');
+        }
+
+        return $links;
+    }
+
+    public static function get_instance() {
+        if (self::$instance) {
+            return self::$instance;
+        }
+
+        self::$instance = new self();
+        return self::$instance;
+    }
+
+    public function load_classes() {
+        require_once plugin_dir_path(__FILE__) . '/api/BusinessReviewAPI.php';
+        new GRBB_API\Business_Review_Api();
+
+        global $grbb_bs;
+
+		if($grbb_bs->can_use_premium_feature()){
+            require_once plugin_dir_path(__FILE__) . '/custom-post.php';
+
+            new GRBBB_CPT\Business_Review_Custom_Post_Type();
+        }
     }
 
     public function register_my_setting()
@@ -111,7 +168,5 @@ class GRBBBusinessReview
 		<?php return ob_get_clean();
     } // Render
 }
-new GRBBBusinessReview();
 
-require_once plugin_dir_path(__FILE__) . '/api/BusinessReviewAPI.php';
-require_once plugin_dir_path(__FILE__) . '/custom-post.php';
+GRBB_Business_Review::get_instance();

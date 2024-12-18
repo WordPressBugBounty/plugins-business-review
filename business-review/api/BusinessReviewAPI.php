@@ -1,12 +1,9 @@
 <?php
+namespace GRBB_API;
+if (!defined('ABSPATH')) {exit;}
 
-class BusinessReviewAPI
+class Business_Review_Api
 {
-
-    /**
-     * Initialize the class
-     */
-
     private $fb_limit = 6;
     private $apiData = [];
 
@@ -192,7 +189,5 @@ class BusinessReviewAPI
 
         echo wp_json_encode(['success' => true]);
         wp_die();
-
     }
 }
-new BusinessReviewAPI();

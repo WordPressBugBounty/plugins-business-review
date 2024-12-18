@@ -1,17 +1,18 @@
 <?php
-class GRBBBusinessReviewCustomPost{
+namespace GRBBB_CPT;
+if (!defined('ABSPATH')) {exit;}
+
+class Business_Review_Custom_Post_Type{
 	public $post_type = 'grbb';
 
 	public function __construct(){
-		global $grbb_bs;
-
-		if($grbb_bs->can_use_premium_feature()){
-			add_action( 'init', [$this, 'onInit'], 20 );
-			add_shortcode( 'business-review', [$this, 'onAddShortcode'], 20 );
-			add_filter( 'manage_grbb_posts_columns', [$this, 'manageGRBBPostsColumns'], 10 );
-			add_action( 'manage_grbb_posts_custom_column', [$this, 'manageGRBBPostsCustomColumns'], 10, 2 );
-			add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
-		}
+		
+		add_action( 'init', [$this, 'onInit'], 20 );
+		add_shortcode( 'business-review', [$this, 'onAddShortcode'], 20 );
+		add_filter( 'manage_grbb_posts_columns', [$this, 'manageGRBBPostsColumns'], 10 );
+		add_action( 'manage_grbb_posts_custom_column', [$this, 'manageGRBBPostsCustomColumns'], 10, 2 );
+		add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
+		
 	}
 
 	function onInit(){
@@ -78,4 +79,3 @@ class GRBBBusinessReviewCustomPost{
 		return $use;
 	}
 }
-new GRBBBusinessReviewCustomPost();
