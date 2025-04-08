@@ -1,9 +1,9 @@
 === Business Review Block -  Pull customers reviews and display them anywhere. ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, reviews, business, facebook, google, yelp
+Tags: block, reviews, business, facebook, google
 Requires at least: 6.5+
-Tested up to: 6.7.2
+Tested up to: 6.7.2  
 Stable tag: 1.0.12
 Requires PHP: 7.1
 License: GPLv3 or later
