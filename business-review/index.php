@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Business Review
  * Description: Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.
- * Version: 1.0.12
+ * Version: 1.0.13
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -49,7 +49,7 @@ class GRBB_Business_Review {
     }
 
     public function define_constants() {
-        define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.12' );
+        define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.13' );
         define('GRBB_DIR', plugin_dir_url(__FILE__));
         define('GRBB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     }
