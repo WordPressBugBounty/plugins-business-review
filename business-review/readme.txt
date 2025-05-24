@@ -3,7 +3,7 @@ Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, facebook, google, yelp
 Requires at least: 6.5+
-Tested up to: 6.7.2
+Tested up to: 6.8
 Stable tag: 1.0.13
 Requires PHP: 7.1
 License: GPLv3 or later
