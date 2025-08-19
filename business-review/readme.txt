@@ -1,4 +1,4 @@
-=== Business Review Block -  Pull customers reviews and display them anywhere. ===
+=== Business Review Block – Display Customer Reviews from Multiple Sources ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, facebook, google, yelp
