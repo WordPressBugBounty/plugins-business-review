@@ -1,84 +1,86 @@
-=== Business Review Block – Display Customer Reviews from Multiple Sources ===
-Contributors: bplugins, abuhayat, btechnologies
+=== Business Reviews – Display Customer Reviews from Popular Sites ===
+Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, reviews, business, facebook, google, yelp
+Tags: block, reviews, business, Facebook, Google,
 Requires at least: 6.5+
-Tested up to: 6.8.1   
-Stable tag: 1.0.13
-Requires PHP: 7.1 
+Tested up to: 6.9 
+Stable tag: 1.0.16
+Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
-Simple and easy way to display your Google, Facebook and Yelp business reviews in your Posts and Pages.
+Business Reviews helps you display Google, Facebook, and Yelp reviews easily on your WordPress site to build trust and boost your business reputation.
 
 == Description ==
 
-👉 [Plugin Demo](https://bplugins.com/products/business-reviews/#demos) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Get Pro Version](https://bplugins.com/products/business-reviews/#pricing) 👈
+Business Reviews helps you collect and showcase authentic customer feedback from multiple platforms such as Google My Business, Facebook Page, and Yelp, directly on your WordPress website.
 
-Business Reviews is a powerful and easy-to-use plugin that allows you to display and embed your customers' reviews from Facebook Page, Google My Business, and Yelp directly on your WordPress website. With this plugin, you can showcase your reputation and build trust with your visitors, encouraging them to choose your business over your competitors.
+[Business Reviews](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Pricing](https://bplugins.com/products/business-reviews/pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/business-reviews/#demos)
 
-The plugin offers a range of customizable options to ensure that your reviews fit seamlessly with your site's design and branding. You can choose which review platforms to display and customize the review display format.
+https://youtu.be/izJKf8Lj1xE
 
-Business Reviews also includes a powerful and intuitive interface that makes it easy to add and manage your reviews. You can connect your Facebook, Google My Business, and Yelp accounts directly within the plugin, and the plugin will automatically import and display your latest reviews. 
+This plugin makes it easy to present real customer experiences in a visually appealing, responsive layout that fits seamlessly with your site’s design and branding. Whether you run a restaurant, online store, or local business, displaying verified reviews builds trust, boosts credibility, and encourages new customers to engage with your services.
 
+With flexible display options, customizable design settings, and seamless account integration, Business Reviews simplifies the process of managing and displaying your latest reviews to help you maintain a strong online reputation effortlessly.
 
-Overall, Business Reviews is a powerful and essential plugin for any business owner looking to build trust with their customers and improve their online reputation. Try it out today and see how it can help you grow your business!
+=== Key Features – Free Version ===
+The free version of Business Reviews provides everything you need to embed real customer feedback from major review platforms into your website.
 
+- **Multi-platform support**: Display reviews from Google My Business, Facebook Page, and Yelp all in one place.
+- **Customizable display**: Easily choose which platforms and reviews to show and how they appear on your website.
+- **Flexible layout controls**: Adjust the number of columns, column gaps, and row gaps to create the perfect grid layout.
+- **Design customization**:
+ - Control wrapper background, padding, and border radius.
+ - Modify card background color, hover shadow, and border styling.
+ - Customize image padding, border, and background for a clean layout.
+- **Text and color options**:
+ - Adjust colors for reviewer names, timestamps, rating icons, and review text.
+ - Set hover effects to make important details stand out.
+- **Element visibility**: Show or hide key elements like reviewer image, name, time, rating, and review description.
+- **Responsive and lightweight**: Works perfectly across all devices and WordPress themes without slowing down your site.
 
-**[Live Demo ](https://bplugins.com/products/business-reviews/)**
+=== Business Reviews Pro - Unlock Premium Features ===
+Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews/pricing) for advanced layout designs, extended review visibility, and typography control. The Pro version gives you more creative freedom to match your review display perfectly with your website’s aesthetic.
 
-= Quick start tutorial =
-https://www.youtube.com/watch?v=izJKf8Lj1xE
+==What’s New in the Pro Version?==
 
+- **Unlimited Facebook reviews**: Display all available reviews from your connected Facebook Page without limitations.
+- **Multiple layout styles**: Choose from Grid 1–4, Masonry, and Slider layouts to make your reviews more dynamic and engaging.
+- **Toast notifications**: Enable floating “toast” messages to highlight reviews or display them interactively, with control over position, duration, and animation.
+- **Advanced typography controls**: Customize fonts for reviewer name, date, review text, and author details for consistent branding.
+- **Review text limit**: Set character limits for long reviews to maintain a clean, organized look.
+- **Improved performance and styling**: Enjoy more control over spacing, shadows, and hover effects for a polished appearance.
 
-= Features =
--  Display reviews from Facebook Page, Google My Business, and Yelp
--  Fully customizable
--  Set Review Position based on Platform. 
--  Elements Image, Name, Time, Icon, Ratting, Description show/hide
--  Select wrapper 
--  Set Columns, column gap and row gap 
--  Wrapper Background and padding 
--  Card Background color, padding, border, border-radius and shadow, hover shadow
--  Image Background color, padding, border, border-radius and shadow
--  Name color and hover color
--  Time Color
--  Review Text Color
--  Rating Icon Color
--  Posted On Text color and author color
--  Review Text color 
+[Try the Pro Version](https://bplugins.com/products/business-reviews/pricing) – Unlock all premium features today!
 
-= Additional Features in the Premium Version =
--  Facebook- Show all reviews 
--  Toast 
--  Toast Position/Duration and animation 
--  Wrapper Select Grid1,Grid2,Grid3,Grid4,Masonry,Slider 
--  Name typography 
--  Time typography 
--  Review text typography 
--  Posted On Typography and author typography 
--  Review Text Show limit 
+=== How to Use Business Reviews  – Quick Start Guide ===
 
-= How to use =
-- Install the plugin.
-- Go the the page/posts where you want to embed the review.
-- Search Business Review by clicking on the + button on the Gutenberg block editor. 
-- Select the Business Review block
-- Set your Facebook, Google and Yelp accounts, then customize the view from the right sidebar. 
-- Publish the page.  
-- Enjoy!
+Getting started is easy!
 
-* For installation help click on Installation Tab
+===Step-by-Step Setup===
+1. **Install** and **activate** the Business Reviews plugin.
+Open the page or post where you want to display the reviews.
+2. In the **Gutenberg Block Editor**, click the **+** icon and search for “**Business Reviews**.”
+3. Add the **Business Reviews** block to your page.
+4. Connect your **Facebook, Google, and Yelp** accounts, then customize the layout and design from the settings panel on the right.
+5. **Publish or update** your page to make the reviews visible on the frontend.
 
+That’s it — your customer reviews are now live!
+
+For detailed installation guidance, see the **Installation** tab.
+
+===Gutenberg Block Support===
+
+Business Reviews includes full support for the WordPress block editor (Gutenberg). Simply add the **Business Reviews block**, choose your preferred layout, and preview live reviews directly inside the editor, no shortcode editing required.
+
+[Live Demo](https://bplugins.com/products/business-reviews/#demos) |  [Upgrade to Pro](https://bplugins.com/products/business-reviews/pricing)
 
 = Feedback =
 - Do you like that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
 
-
 = ⭐ Check out the Parent Plugin of this plugin- =
 
 🔥 **[b Blocks](https://bblockswp.com/)** – Best gutenberg blocks collections for WordPress.
-
 
 = ⭐ Check out our other WordPress Plugins- =
 
@@ -159,6 +161,15 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.16 - 17 Nov, 2025 =
+* sdk updated;
+
+= 1.0.15 - 31 Oct, 2025 =
+* fix all issues;
+
+= 1.0.14 - 30 Oct, 2025 =
+* Fixed trademark issues
+
 = 1.0.13 - 11 April, 2025 =
 * Some problem fixed;
 
@@ -205,6 +216,16 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Upgrade Notice ==
 
+= 1.0.16 - 17 Nov, 2025 =
+* sdk updated;
+
+= 1.0.15 - 31 Oct, 2025 =
+* fix all issues;
+
+= 1.0.14 - 30 Oct, 2025 =
+* Fixed trademark issues
+
+
 = 1.0.13 - 11 April, 2025 =
 * Some problem fixed;
 
@@ -247,3 +268,26 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 = 1.0.0 =
 * Initial Release
+
+
+== External services Facebook, Google, Yelp ==
+
+https://api.bplugins.com/ 
+
+We complete the Facebook authorization process using the domain https://api.bplugins.com/. After a user grants all the required permissions, their Facebook page reviews are fetched through the https://graph.facebook.com API.
+
+https://maps.googleapis.com/
+Documentation link: https://bplugins.com/docs/business-reviews/
+Terms link: https://developers.google.com/terms/site-terms
+Privacy link: https://policies.google.com/privacy
+
+A user’s Google Business reviews are displayed using the domain https://maps.googleapis.com/
+. The documentation below explains how to generate the API key and Place ID: https://bplugins.com/docs/business-reviews/guides/authorization/
+
+https://api.yelp.com/
+
+Yelp business reviews are fetched using the domain https://api.yelp.com/.The documentation below explains how users can obtain their API key and business URL.
+Documentation link: https://bplugins.com/docs/business-reviews/
+
+Privacy Link: https://terms.yelp.com/privacy/
+Terms Link: https://terms.yelp.com/tos/en_us/20260101_en_us/

@@ -12,7 +12,6 @@ class Business_Review_Custom_Post_Type{
 		add_filter( 'manage_grbb_posts_columns', [$this, 'manageGRBBPostsColumns'], 10 );
 		add_action( 'manage_grbb_posts_custom_column', [$this, 'manageGRBBPostsCustomColumns'], 10, 2 );
 		add_action( 'use_block_editor_for_post', [$this, 'useBlockEditorForPost'], 999, 2 );
-		
 	}
 
 	function onInit(){
@@ -31,12 +30,12 @@ class Business_Review_Custom_Post_Type{
 				'not_found'		=> __( 'Sorry, we couldn\'t find the that you are looking for.', 'business-review' )
 			],
 			'public'				=> false,
-			'show_ui'				=> true, 		
+			'show_ui'				=> true,		
 			'show_in_rest'			=> true,							
 			'publicly_queryable'	=> false,
 			'exclude_from_search'	=> true,
 			'menu_position'			=> 14,
-			'menu_icon'				=> 'data:image/svg+xml;base64,' . base64_encode( $menuIcon ),		
+			'menu_icon'				=> 'data:image/svg+xml;base64,' . base64_encode( $menuIcon ),	
 			'has_archive'			=> false,
 			'hierarchical'			=> false,
 			'capability_type'		=> 'page',
@@ -44,6 +43,7 @@ class Business_Review_Custom_Post_Type{
 			'supports'				=> [ 'title', 'editor' ],
 			'template'				=> [ ['grbb/business-review'] ],
 			'template_lock'			=> 'all',
+			'show_in_menu'          => 'business-review'
 		]); // Register Post Type
 	}
 

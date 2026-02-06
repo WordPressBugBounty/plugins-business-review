@@ -1,7 +1,5 @@
 <?php
-namespace GRBB_API;
 if (!defined('ABSPATH')) {exit;}
-
 class Business_Review_Api
 {
     private $fb_limit = 6;
@@ -38,8 +36,9 @@ class Business_Review_Api
             wp_die();
         }
         $reviews = [];
-
+        
         if (isset($_GET['platform'])) {
+            
             $platform = $_GET['platform'];
             if (strpos($platform, 'facebook') !== false) {
                 $reviews['facebook'] = $this->getFBReviews();
@@ -121,15 +120,15 @@ class Business_Review_Api
 
         $isPremium = get_option('grbb_is_premium', false);
 
-        global $grbb_bs;
-        if ($grbb_bs->can_use_premium_feature()) {
+        // global $grbb_bs;
+        if ( BR_IS_PRO && brIsPremium()) {
             $this->fb_limit = 500;
         }
 
-        if ($isPremium != $grbb_bs->can_use_premium_feature()) {
+        if (BR_IS_PRO && brIsPremium()) {
             $reviews = [];
         }
-        update_option('grbb_is_premium', $grbb_bs->can_use_premium_feature());
+        update_option('grbb_is_premium', brIsPremium());
 
         $data = json_decode(get_option('grbb_apis'), true);
         $accessToken = $data['fbAccessToken'] ?? false;
@@ -191,3 +190,4 @@ class Business_Review_Api
         wp_die();
     }
 }
+new Business_Review_Api();
