@@ -21,8 +21,10 @@ class Business_Review_Custom_Post_Type{
 			'labels'				=> [
 				'name'			=> __( 'Business Review', 'business-review'),
 				'singular_name'	=> __( 'Business Review', 'business-review' ),
-				'add_new'		=> __( 'Add New', 'business-review' ),
-				'add_new_item'	=> __( 'Add New', 'business-review' ),
+				'menu_name'     => __( 'Business', 'block-for-mailchimp' ),
+				'all_items'     => __( 'All Reviews', 'block-for-mailchimp' ),
+				'add_new'		=> __( 'Add New', 'block-for-mailchimp' ),
+				'add_new_item'	=> __( '&#8627; Add New', 'block-for-mailchimp' ),
 				'edit_item'		=> __( 'Edit', 'business-review' ),
 				'new_item'		=> __( 'New', 'business-review' ),
 				'view_item'		=> __( 'View', 'business-review' ),
@@ -43,7 +45,6 @@ class Business_Review_Custom_Post_Type{
 			'supports'				=> [ 'title', 'editor' ],
 			'template'				=> [ ['grbb/business-review'] ],
 			'template_lock'			=> 'all',
-			'show_in_menu'          => 'business-review'
 		]); // Register Post Type
 	}
 

@@ -3,7 +3,7 @@
 /**
  * Plugin Name: Business Review
  * Description: Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.
- * Version: 1.0.16
+ * Version: 1.0.17
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv3
@@ -18,7 +18,7 @@ if ( !defined( 'ABSPATH' ) ) {
 if ( function_exists( 'br_fs' ) ) {
     br_fs()->set_basename( false, __FILE__ );
 } else {
-    define( 'GRBB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.16' ) );
+    define( 'GRBB_PLUGIN_VERSION', ( isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === $_SERVER['HTTP_HOST'] ? time() : '1.0.17' ) );
     define( 'GRBB_DIR', plugin_dir_url( __FILE__ ) );
     define( 'GRBB_ASSETS_DIR', plugin_dir_url( __FILE__ ) . 'assets/' );
     define( 'GRBB_DIR_PATH', plugin_dir_path( __FILE__ ) );
@@ -31,6 +31,7 @@ if ( function_exists( 'br_fs' ) ) {
                 // Include Freemius SDK.
                 if ( BR_IS_PRO ) {
                     require_once dirname( __FILE__ ) . '/freemius/start.php';
+                    require_once dirname( __FILE__ ) . '/includes/LicenseActivation.php';
                 } else {
                     require_once dirname( __FILE__ ) . '/freemius-lite/start.php';
                 }
@@ -40,7 +41,7 @@ if ( function_exists( 'br_fs' ) ) {
                     'premium_slug'        => 'business-review-pro',
                     'type'                => 'plugin',
                     'public_key'          => 'pk_fc967390d964ec916d711a9a03a91',
-                    'is_premium'          => false,
+                    'is_premium'          => true,
                     'premium_suffix'      => 'Pro',
                     'has_premium_version' => true,
                     'has_addons'          => false,
@@ -49,18 +50,11 @@ if ( function_exists( 'br_fs' ) ) {
                         'days'               => 7,
                         'is_require_payment' => false,
                     ),
-                    'menu'                => ( BR_IS_PRO ? array(
-                        'slug'       => 'business-review',
-                        'first-path' => 'admin.php?page=business-review#/pricing',
+                    'menu'                => array(
+                        'slug'       => 'edit.php?post_type=grbb',
+                        'first-path' => 'wp-admin/edit.php?post_type=grbb&page=business-review#/pricing',
                         'support'    => false,
-                    ) : array(
-                        'slug'       => 'business-review',
-                        'first-path' => 'tools.php?page=business-review#/pricing',
-                        'support'    => false,
-                        'parent'     => array(
-                            'slug' => 'tools.php',
-                        ),
-                    ) ),
+                    ),
                 );
                 $br_fs = ( BR_IS_PRO ? fs_dynamic_init( $brConfig ) : fs_lite_dynamic_init( $brConfig ) );
             }
@@ -136,15 +130,9 @@ if ( function_exists( 'br_fs' ) ) {
 
         public function load_classes() {
             require_once plugin_dir_path( __FILE__ ) . '/api/BusinessReviewAPI.php';
-            if ( BR_IS_PRO ) {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-pro.php';
-            } else {
-                require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu-free.php';
-            }
-            if ( BR_IS_PRO && brIsPremium() ) {
-                require_once plugin_dir_path( __FILE__ ) . '/custom-post.php';
-                new GRBBB_CPT\Business_Review_Custom_Post_Type();
-            }
+            require_once plugin_dir_path( __FILE__ ) . '/custom-post.php';
+            new GRBBB_CPT\Business_Review_Custom_Post_Type();
+            require_once plugin_dir_path( __FILE__ ) . '/includes/admin-menu.php';
         }
 
         public function register_my_setting() {

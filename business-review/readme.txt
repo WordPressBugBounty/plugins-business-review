@@ -1,10 +1,10 @@
 === Business Reviews – Display Customer Reviews from Popular Sites ===
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
-Tags: block, reviews, business, Facebook, Google,
+Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5+
 Tested up to: 6.9
-Stable tag: 1.0.16
+Stable tag: 1.0.17
 Requires PHP: 7.1
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
@@ -15,7 +15,7 @@ Business Reviews helps you display Google, Facebook, and Yelp reviews easily on 
 
 Business Reviews helps you collect and showcase authentic customer feedback from multiple platforms such as Google My Business, Facebook Page, and Yelp, directly on your WordPress website.
 
-[Business Reviews](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Pricing](https://bplugins.com/products/business-reviews/pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/business-reviews/#demos)
+[Business Reviews](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Pricing](https://bplugins.com/products/business-reviews/#pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/business-reviews/#demos)
 
 https://youtu.be/izJKf8Lj1xE
 
@@ -40,7 +40,7 @@ The free version of Business Reviews provides everything you need to embed real 
 - **Responsive and lightweight**: Works perfectly across all devices and WordPress themes without slowing down your site.
 
 === Business Reviews Pro - Unlock Premium Features ===
-Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews/pricing) for advanced layout designs, extended review visibility, and typography control. The Pro version gives you more creative freedom to match your review display perfectly with your website’s aesthetic.
+Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews/#pricing) for advanced layout designs, extended review visibility, and typography control. The Pro version gives you more creative freedom to match your review display perfectly with your website’s aesthetic.
 
 ==What’s New in the Pro Version?==
 
@@ -51,7 +51,7 @@ Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews
 - **Review text limit**: Set character limits for long reviews to maintain a clean, organized look.
 - **Improved performance and styling**: Enjoy more control over spacing, shadows, and hover effects for a polished appearance.
 
-[Try the Pro Version](https://bplugins.com/products/business-reviews/pricing) – Unlock all premium features today!
+[Try the Pro Version](https://bplugins.com/products/business-reviews/#pricing) – Unlock all premium features today!
 
 === How to Use Business Reviews  – Quick Start Guide ===
 
@@ -73,7 +73,7 @@ For detailed installation guidance, see the **Installation** tab.
 
 Business Reviews includes full support for the WordPress block editor (Gutenberg). Simply add the **Business Reviews block**, choose your preferred layout, and preview live reviews directly inside the editor, no shortcode editing required.
 
-[Live Demo](https://bplugins.com/products/business-reviews/#demos) |  [Upgrade to Pro](https://bplugins.com/products/business-reviews/pricing)
+[Live Demo](https://bplugins.com/products/business-reviews/#demos) |  [Upgrade to Pro](https://bplugins.com/products/business-reviews/#pricing)
 
 = Feedback =
 - Do you like that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
@@ -161,6 +161,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.17 - 12 April, 2025 =
+* Shortcode feature added.
+* New modern dashboard added.
+
 = 1.0.16 - 17 Nov, 2025 =
 * sdk updated;
 
@@ -215,6 +219,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.17 - 12 April, 2025 =
+* Shortcode feature added.
+* New modern dashboard added.
 
 = 1.0.16 - 17 Nov, 2025 =
 * sdk updated;
