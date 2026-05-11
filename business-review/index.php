@@ -52,7 +52,7 @@ if ( function_exists( 'br_fs' ) ) {
                     ),
                     'menu'                => array(
                         'slug'       => 'edit.php?post_type=grbb',
-                        'first-path' => 'wp-admin/edit.php?post_type=grbb&page=business-review#/pricing',
+                        'first-path' => 'edit.php?post_type=grbb&page=business-review#/pricing',
                         'support'    => false,
                     ),
                 );

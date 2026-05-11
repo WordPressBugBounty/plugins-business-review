@@ -2,8 +2,8 @@
 Contributors: bplugins, abuhayat, btechnologies, freemius
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
-Requires at least: 6.5+
-Tested up to: 6.9
+Requires at least: 6.5
+Tested up to: 6.9.4
 Stable tag: 1.0.17
 Requires PHP: 7.1
 License: GPLv3 or later
