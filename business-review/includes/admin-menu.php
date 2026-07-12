@@ -5,17 +5,21 @@ if(!class_exists('brAdminMenu')) {
 
     class brAdminMenu {
 
+        private $page_hook = '';
+
         public function __construct() {
             add_action( 'admin_enqueue_scripts', [$this, 'adminEnqueueScripts'] );
             add_action( 'admin_menu', [$this, 'adminMenu'] );
         }
 
         public function adminEnqueueScripts($hook) {
-            // if( strpos( $hook, 'business-review' ) ){
-                wp_enqueue_style( 'grbb-admin-dashboard', GRBB_DIR . 'build/admin-dashboard.css', [], GRBB_PLUGIN_VERSION );
-                wp_enqueue_script( 'grbb-admin-dashboard', GRBB_DIR . 'build/admin-dashboard.js', [ 'react', 'react-dom', 'wp-data', "wp-api", "wp-util", "wp-i18n"], GRBB_PLUGIN_VERSION, true );
-                wp_set_script_translations( 'grbb-admin-dashboard', 'business-review', GRBB_DIR_PATH . 'languages' );   
-            // }
+            // Only load the dashboard bundle on this plugin's own admin page.
+            if ( $hook !== $this->page_hook ) {
+                return;
+            }
+            wp_enqueue_style( 'grbb-admin-dashboard', GRBB_DIR . 'build/admin-dashboard.css', [], GRBB_PLUGIN_VERSION );
+            wp_enqueue_script( 'grbb-admin-dashboard', GRBB_DIR . 'build/admin-dashboard.js', [ 'react', 'react-dom', 'wp-data', "wp-api", "wp-util", "wp-i18n"], GRBB_PLUGIN_VERSION, true );
+            wp_set_script_translations( 'grbb-admin-dashboard', 'business-review', GRBB_DIR_PATH . 'languages' );
         }
 
         public function adminMenu(){
@@ -24,15 +28,15 @@ if(!class_exists('brAdminMenu')) {
              
 
             
-            add_submenu_page(
+            $this->page_hook = add_submenu_page(
                 'edit.php?post_type=grbb',
                 __('Demo and Help', 'business-review'),
                 __('Demo and Help', 'business-review'),
                 'manage_options',
                 'business-review',
                 [$this, 'grbbHelpPage']
-            );   
-            
+            );
+
         }
 
         public function grbbHelpPage()
@@ -41,10 +45,7 @@ if(!class_exists('brAdminMenu')) {
                 id='grbbDashboard'
                 data-info='<?php echo esc_attr( wp_json_encode( [
                     'version' => GRBB_PLUGIN_VERSION,
-                    'isPremium' => brIsPremium(),
-                    'hasPro' => BR_IS_PRO,
-                    'nonce' => wp_create_nonce( 'apbCreatePage' ),
-		            'licenseActiveNonce' => wp_create_nonce( 'bPlLicenseActivation' )
+                    'adminUrl' => admin_url(),
                 ] ) ); ?>'
             >
             </div>

@@ -1,11 +1,11 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
-  "apiVersion": 2,
+  "apiVersion": 3,
   "name": "grbb/business-review",
   "title": "Business Review",
   "description": "Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.",
   "category": "widgets",
-  "version": "1.0.13",
+  "version": "1.0.18",
   "keywords": [
     "business",
     "review",

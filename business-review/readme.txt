@@ -1,13 +1,13 @@
 === Business Reviews – Display Customer Reviews from Popular Sites ===
-Contributors: bplugins, abuhayat, btechnologies, freemius
+Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5
-Tested up to: 6.9.4
-Stable tag: 1.0.17 
-Requires PHP: 7.1
-License: GPLv3 or later
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Tested up to: 7.0
+Stable tag: 1.0.18
+Requires PHP: 7.2
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Business Reviews helps you display Google, Facebook, and Yelp reviews easily on your WordPress site to build trust and boost your business reputation.
 
@@ -161,7 +161,14 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 1.0.17 - 12 April, 2025 =
+= 1.0.18 - 8 July, 2026 = 
+* Enhancement: If an API call fails, a user-friendly error message will be displayed.
+* New: We have added three new layouts: Grid1, Grid2, and Grid3.
+* Fix: The Yelp API issue has been resolved; the reason it was failing was that it could not fetch the reviews.
+* Update: Redesigned the shortcode and authorization areas.
+* Update: A modern dashboard has been added to both the Pro and Free versions of the Business Reviews plugin.
+
+= 1.0.17 - 12 April, 2026 =
 * Shortcode feature added.
 * New modern dashboard added.
 
@@ -220,7 +227,11 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Upgrade Notice ==
 
-= 1.0.17 - 12 April, 2025 =
+= 1.0.18 - 8 July, 2026 =
+* Enhancement: If an API call fails, a user-friendly error message will be displayed.
+* Fix: The Yelp API issue has been resolved; the reason it was failing was that it could not fetch the reviews.
+
+= 1.0.17 - 12 April, 2026 =
 * Shortcode feature added.
 * New modern dashboard added.
 
@@ -278,6 +289,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 * Initial Release
 
 
+== Source Code ==
+
+You can find the source code, report bugs, and contribute to the development of this plugin on our GitHub repository:
+[**Business Review on GitHub**](https://github.com/bPlugins/business-review-free)
+
+
 == External services Facebook, Google, Yelp ==
 
 https://api.bplugins.com/ 
@@ -299,3 +316,24 @@ Documentation link: https://bplugins.com/docs/business-reviews/
 
 Privacy Link: https://terms.yelp.com/privacy/
 Terms Link: https://terms.yelp.com/tos/en_us/20260101_en_us/
+
+= Font Awesome = 
+* **Source:** https://fontawesome.com/
+* **GitHub:** https://github.com/FortAwesome/Font-Awesome
+* **License:** SIL OFL 1.1 (Fonts), MIT (CSS) – https://fontawesome.com/license/free
+* **Purpose:** Provides scalable vector icons used for slider navigation arrows and UI elements.
+
+= bpl-tools =
+* Source / GitHub: https://github.com/bPlugins/bpl-tools
+* License: GPL-2.0-or-later – https://www.gnu.org/licenses/gpl-2.0.html
+* Purpose: Shared utility library providing admin dashboard components and common Gutenberg editor controls.
+* External Services: The library may connect to bPlugins, WordPress.org, and Freemius services for product data and checkout functionality. See full details: https://github.com/bPlugins/bpl-tools#external-requests--why-they-are-made
+
+= Freemius Lite SDK =
+
+* **Source:** [https://bplugins.com/](https://bplugins.com/)
+* **GitHub:** [https://github.com/bPlugins/freemius-lite-sdk](https://github.com/bPlugins/freemius-lite-sdk)
+* **License:** GPL-2.0-or-later – [https://www.gnu.org/licenses/gpl-2.0.html](https://www.gnu.org/licenses/gpl-2.0.html)
+* **Purpose:** Provides an opt-in consent form for usage tracking and analytics to help improve the plugin. No data is sent before explicit user consent.
+* **External Services:** Communicates with `api.bplugins.com` (activation events) and `wp.freemius.com` (opt-in processing) only after user opt-in. See [bPlugins Privacy Policy](https://bplugins.com/privacy-policy) and [Freemius Privacy Policy](https://freemius.com/privacy/).
+
