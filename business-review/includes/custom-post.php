@@ -21,7 +21,7 @@ class Business_Review_Custom_Post_Type{
 			'labels'				=> [
 				'name'			=> __( 'Business Review', 'business-review'),
 				'singular_name'	=> __( 'Business Review', 'business-review' ),
-				'menu_name'     => __( 'Business', 'business-review' ),
+				'menu_name'     => __( 'Business Reviews', 'business-review' ),
 				'all_items'     => __( 'All Reviews', 'business-review' ),
 				'add_new'		=> __( 'Add New', 'business-review' ),
 				'add_new_item'	=> __( '&#8627; Add New', 'business-review' ),
@@ -37,7 +37,7 @@ class Business_Review_Custom_Post_Type{
 			'publicly_queryable'	=> false,
 			'exclude_from_search'	=> true,
 			'menu_position'			=> 14,
-			'menu_icon'				=> 'data:image/svg+xml;base64,' . base64_encode( $menuIcon ),	
+			'menu_icon'				=> 'data:image/svg+xml;base64,' . base64_encode( $menuIcon ),
 			'has_archive'			=> false,
 			'hierarchical'			=> false,
 			'capability_type'		=> 'page',

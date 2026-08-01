@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: Business Reviews – Display Customer Reviews from Popular Sites
+ * Plugin Name: Business Reviews – build trust with real customer feedback
  * Description: Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.
- * Version: 1.0.18
+ * Version: 1.0.19
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -17,7 +17,7 @@ if (function_exists('grbb_fs')) {
      grbb_fs()->set_basename( true, __FILE__ );
 } else {
 
-    define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ? time() : '1.0.18' );
+    define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ? time() : '1.0.19' );
     define('GRBB_DIR', plugin_dir_url(__FILE__));
     define('GRBB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     define('GRBB_DIR_PATH', plugin_dir_path(__FILE__));

@@ -137,12 +137,31 @@ class Business_Review_Api
 
     }
 
+    /**
+     * Google picks which five reviews to return based on the requested language, so a
+     * Dutch business asked without a language gets its English reviews instead of the
+     * Dutch ones. reviews_no_translations alone cannot fix that — the language has to
+     * be sent explicitly.
+     */
+    private function getGoogleReviewLanguage()
+    {
+        $data = json_decode(get_option('grbb_apis'), true);
+        $language = isset($data['googleReviewLanguage']) ? trim($data['googleReviewLanguage']) : '';
+
+        // Google accepts codes like 'nl', 'bn' and 'zh-CN'.
+        return substr(preg_replace('/[^a-zA-Z\-]/', '', $language), 0, 10);
+    }
+
     public function getGoogleReviews()
     {
-        $reviews = get_transient('grbb_google_reviews');
+        $cached = get_transient('grbb_google_reviews');
         $data = json_decode(get_option('grbb_apis'), true);
         $placeId = $data['googlePlaceID'] ?? '';
         $key = $data['googlePlaceKey'] ?? '';
+        $language = $this->getGoogleReviewLanguage();
+        // When enabled, Google translates the reviews into the selected language
+        // instead of returning them in their original language.
+        $translate = !empty($data['googleTranslate']);
 
         if (!$placeId || !$key) {
             // delete_transient( 'grbb_google_reviews' );
@@ -150,8 +169,22 @@ class Business_Review_Api
             return [];
         }
 
+        // The cached payload remembers which language/translate mode it was fetched
+        // with, so changing either setting invalidates it instead of serving stale data.
+        $reviews = false;
+        if (is_array($cached) && isset($cached['language'], $cached['translate'], $cached['reviews']) && $cached['language'] === $language && $cached['translate'] === $translate) {
+            $reviews = $cached['reviews'];
+        }
+
         if (false === $reviews) {
-            $url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=" . rawurlencode($placeId) . "&fields=reviews&reviews_no_translations=true&key=" . rawurlencode($key);
+            // reviews_no_translations=true keeps the original language; false lets
+            // Google translate the reviews into the requested `language`.
+            $noTranslations = $translate ? 'false' : 'true';
+            $url = "https://maps.googleapis.com/maps/api/place/details/json?place_id=" . rawurlencode($placeId) . "&fields=reviews&reviews_no_translations=$noTranslations&key=" . rawurlencode($key);
+
+            if ($language) {
+                $url .= "&language=" . rawurlencode($language);
+            }
 
             $response = wp_remote_get($url);
 
@@ -169,7 +202,7 @@ class Business_Review_Api
 
             $reviews = $body['result']['reviews'] ?? [];
             $this->setApiError('google');
-            set_transient('grbb_google_reviews', $reviews, 60 * 60 * 24);
+            set_transient('grbb_google_reviews', ['language' => $language, 'translate' => $translate, 'reviews' => $reviews], 60 * 60 * 24);
         }
 
         return $reviews;

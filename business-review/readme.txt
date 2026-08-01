@@ -1,10 +1,10 @@
-=== Business Reviews – Display Customer Reviews from Popular Sites ===
+=== Business Reviews – build trust with real customer feedback ===
 Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.0.18
+Stable tag: 1.0.19
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -161,7 +161,12 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
-= 1.0.18 - 8 July, 2026 = 
+= 1.0.19 - 1 August, 2026 =
+* New: Added a "Review Language" option for Google reviews so you can choose which language's reviews are shown.
+* New: Added a "Translate reviews" toggle to display Google reviews in their original language or translated into the selected language.
+* Fix: Google reviews were being auto-translated to English; they now show in their original language by default.
+
+= 1.0.18 - 8 July, 2026 =
 * Enhancement: If an API call fails, a user-friendly error message will be displayed.
 * New: We have added three new layouts: Grid1, Grid2, and Grid3.
 * Fix: The Yelp API issue has been resolved; the reason it was failing was that it could not fetch the reviews.
@@ -226,6 +231,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.19 - 1 August, 2026 =
+* New: Choose which language your Google reviews are displayed in, or translate them into a selected language.
+* Fix: Google reviews are no longer force-translated to English; the original language is kept by default.
 
 = 1.0.18 - 8 July, 2026 =
 * Enhancement: If an API call fails, a user-friendly error message will be displayed.
