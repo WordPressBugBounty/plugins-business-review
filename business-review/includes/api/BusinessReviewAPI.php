@@ -37,9 +37,7 @@ class Business_Review_Api
             wp_send_json_error(['message' => $response->get_error_message()]);
         }
 
-        header('Content-Type: application/json; charset=utf-8');
-        echo wp_remote_retrieve_body($response);
-        wp_die();
+        wp_send_json(json_decode(wp_remote_retrieve_body($response), true));
     }
 
     public function grbb_get_all_reviews()
@@ -97,7 +95,7 @@ class Business_Review_Api
         }
 
         if (false === $reviews) {
-            $path = trim((string) parse_url($yelpBusinessUrl, PHP_URL_PATH), '/');
+            $path = trim((string) wp_parse_url($yelpBusinessUrl, PHP_URL_PATH), '/');
             $segments = $path ? explode('/', $path) : [];
             $bizIndex = array_search('biz', $segments, true);
             $alias = false !== $bizIndex ? ($segments[$bizIndex + 1] ?? '') : '';

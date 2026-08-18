@@ -46,7 +46,7 @@ function grbb_uninstall_cleanup() {
 				'post_status'      => 'any',
 				'numberposts'      => -1,
 				'fields'           => 'ids',
-				'suppress_filters' => true,
+				'suppress_filters' => false,
 			)
 		);
 		foreach ( $posts as $post_id ) {
@@ -58,9 +58,9 @@ function grbb_uninstall_cleanup() {
 }
 
 if ( is_multisite() ) {
-	$site_ids = get_sites( array( 'fields' => 'ids' ) );
-	foreach ( $site_ids as $site_id ) {
-		switch_to_blog( $site_id );
+	$grbb_site_ids = get_sites( array( 'fields' => 'ids' ) );
+	foreach ( $grbb_site_ids as $grbb_site_id ) {
+		switch_to_blog( $grbb_site_id );
 		grbb_uninstall_cleanup();
 		restore_current_blog();
 	}

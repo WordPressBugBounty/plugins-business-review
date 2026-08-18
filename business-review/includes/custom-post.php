@@ -105,7 +105,7 @@ class Business_Review_Custom_Post_Type{
 				<input value="[business-review id=%1$d]" onclick="grbbHandleShortcode( %1$d )" readonly>
 				<span class="tooltip">%2$s</span>
 			</div>',
-				$post_ID,
+				absint( $post_ID ),
 				esc_html__( 'Copy To Clipboard', 'business-review' )
 			);
 		}

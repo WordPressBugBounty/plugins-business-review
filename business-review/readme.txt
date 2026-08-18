@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.0.19
+Stable tag: 1.0.20
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -45,7 +45,7 @@ Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews
 ==What’s New in the Pro Version?==
 
 - **Unlimited Facebook reviews**: Display all available reviews from your connected Facebook Page without limitations.
-- **Multiple layout styles**: Choose from Grid 1–4, Masonry, and Slider layouts to make your reviews more dynamic and engaging.
+- **Multiple layout styles**: Choose from Grid 1–4, Masonry, Slider, and Carousel layouts to make your reviews more dynamic and engaging.
 - **Toast notifications**: Enable floating “toast” messages to highlight reviews or display them interactively, with control over position, duration, and animation.
 - **Advanced typography controls**: Customize fonts for reviewer name, date, review text, and author details for consistent branding.
 - **Review text limit**: Set character limits for long reviews to maintain a clean, organized look.
@@ -161,6 +161,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.20 - 17 August, 2026 =
+* Update: Updated Pro feature details and compatibility check.
+* Update: Bumped version to 1.0.20.
+
 = 1.0.19 - 1 August, 2026 =
 * New: Added a "Review Language" option for Google reviews so you can choose which language's reviews are shown.
 * New: Added a "Translate reviews" toggle to display Google reviews in their original language or translated into the selected language.
@@ -231,6 +235,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.20 - 17 August, 2026 =
+* Update: Version compatibility bump to 1.0.20.
 
 = 1.0.19 - 1 August, 2026 =
 * New: Choose which language your Google reviews are displayed in, or translate them into a selected language.
