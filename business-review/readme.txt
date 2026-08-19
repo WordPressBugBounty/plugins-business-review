@@ -4,7 +4,7 @@ Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5
 Tested up to: 7.0
-Stable tag: 1.0.20
+Stable tag: 1.0.21
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -160,6 +160,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Changelog ==
+
+= 1.0.21 - 19 August, 2026 =
+* Fix: Resolved Plugin Check (PCP) escaping, parse_url(), suppress_filters, and global-variable-prefix issues.
 
 = 1.0.20 - 17 August, 2026 =
 * Update: Updated Pro feature details and compatibility check.
