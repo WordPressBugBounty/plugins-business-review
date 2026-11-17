@@ -44,8 +44,15 @@ if(!class_exists('brAdminMenu')) {
             <div
                 id='grbbDashboard'
                 data-info='<?php echo esc_attr( wp_json_encode( [
-                    'version' => GRBB_PLUGIN_VERSION,
-                    'adminUrl' => admin_url(),
+                    'version'   => GRBB_PLUGIN_VERSION,
+                    'adminUrl'  => admin_url(),
+                    'isPremium' => function_exists( 'grbb_fs' ) && grbb_fs()->can_use_premium_code(),
+                    'bfcm'      => [
+                        'show'       => class_exists( 'GRBB_BFCM_Notice' ) ? GRBB_BFCM_Notice::get_instance()->is_active() : false,
+                        'nonce'      => wp_create_nonce( 'grbb_bfcm_dismiss_nonce' ),
+                        'ajaxUrl'    => admin_url( 'admin-ajax.php' ),
+                        'pricingUrl' => 'https://bplugins.com/products/business-reviews/pricing/?utm_source=plugin_dashboard&utm_medium=bfcm_banner&utm_campaign=bfcm2026',
+                    ],
                 ] ) ); ?>'
             >
             </div>

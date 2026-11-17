@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Business Reviews – build trust with real customer feedback
  * Description: Simple and easy way display your Google ,Facebook and yelp business reviews in your Posts and Pages.
- * Version: 1.0.21
+ * Version: 1.0.22
  * Author: bPlugins
  * Author URI: http://bplugins.com
  * License: GPLv2 or later
@@ -17,7 +17,7 @@ if (function_exists('grbb_fs')) {
      grbb_fs()->set_basename( true, __FILE__ );
 } else {
 
-    define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ? time() : '1.0.21' );
+    define( 'GRBB_PLUGIN_VERSION', isset( $_SERVER['HTTP_HOST'] ) && 'localhost' === sanitize_text_field( wp_unslash( $_SERVER['HTTP_HOST'] ) ) ? time() : '1.0.22' );
     define('GRBB_DIR', plugin_dir_url(__FILE__));
     define('GRBB_ASSETS_DIR', plugin_dir_url(__FILE__) . 'assets/');
     define('GRBB_DIR_PATH', plugin_dir_path(__FILE__));
@@ -75,6 +75,17 @@ if (function_exists('grbb_fs')) {
             
             if( plugin_basename( __FILE__ ) == $file ) {
                 $links['go_pro'] = sprintf( '<a href="%s" style="%s" target="__blank">%s</a>', 'https://bplugins.com/products/business-reviews/#pricing', 'color:#4527a4;font-weight:bold', __( 'Go Pro!', 'business-review' ) );
+
+                // Black Friday action link (active until December 5, 2026)
+                if ( time() <= 1796515199 && ( ! function_exists( 'grbb_fs' ) || ! grbb_fs()->can_use_premium_code() ) ) {
+                    $bfcmUrl = 'https://bplugins.com/products/business-reviews/pricing/?utm_source=plugins_page&utm_medium=bfcm_action_link&utm_campaign=bfcm2026';
+                    $links['bfcm'] = sprintf(
+                        '<a href="%s" style="%s" target="_blank" rel="noopener noreferrer">%s</a>',
+                        esc_url( $bfcmUrl ),
+                        'color:#d63638;font-weight:bold;',
+                        __( 'Black Friday: Save 45%!', 'business-review' )
+                    );
+                }
             }
 
             return $links;
@@ -108,6 +119,7 @@ if (function_exists('grbb_fs')) {
             require_once plugin_dir_path(__FILE__) . 'includes/custom-post.php';
             new GRBBB_CPT\Business_Review_Custom_Post_Type();
             require_once plugin_dir_path(__FILE__) . 'includes/admin-menu.php';
+            require_once plugin_dir_path(__FILE__) . 'includes/BFCMNotice.php';
         }
 
         public function register_my_setting()

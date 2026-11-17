@@ -3,8 +3,8 @@ Contributors: bplugins, abuhayat, btechnologies
 Donate link: https://www.buymeacoffee.com/abuhayat
 Tags: block, reviews, business, Facebook, Google
 Requires at least: 6.5
-Tested up to: 7.0  
-Stable tag: 1.0.21
+Tested up to: 7.0
+Stable tag: 1.0.22
 Requires PHP: 7.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,7 +17,7 @@ Business Reviews helps you collect and showcase authentic customer feedback from
 
 [Business Reviews](https://bplugins.com/products/business-reviews/) | [Documentation](https://bplugins.com/docs/business-reviews/) | [Pricing](https://bplugins.com/products/business-reviews/#pricing) | [Support](https://bplugins.com/support/) | [Demo](https://bplugins.com/products/business-reviews/#demos)
 
-https://youtu.be/izJKf8Lj1xE 
+https://youtu.be/izJKf8Lj1xE
 
 This plugin makes it easy to present real customer experiences in a visually appealing, responsive layout that fits seamlessly with your site’s design and branding. Whether you run a restaurant, online store, or local business, displaying verified reviews builds trust, boosts credibility, and encourages new customers to engage with your services.
 
@@ -42,7 +42,7 @@ The free version of Business Reviews provides everything you need to embed real 
 === Business Reviews Pro - Unlock Premium Features ===
 Upgrade to [Business Reviews Pro](https://bplugins.com/products/business-reviews/#pricing) for advanced layout designs, extended review visibility, and typography control. The Pro version gives you more creative freedom to match your review display perfectly with your website’s aesthetic.
 
-==What’s New in the Pro Version?== 
+==What’s New in the Pro Version?==
 
 - **Unlimited Facebook reviews**: Display all available reviews from your connected Facebook Page without limitations.
 - **Multiple layout styles**: Choose from Grid 1–4, Masonry, Slider, and Carousel layouts to make your reviews more dynamic and engaging.
@@ -78,7 +78,7 @@ Business Reviews includes full support for the WordPress block editor (Gutenberg
 = Feedback =
 - Do you like that plugin? Hate it? Want a new feature? [Send me some feedback](mailto:support@bplugins.com 'Send feedback')
 
-= ⭐ Check out the Parent Plugin of this plugin- = 
+= ⭐ Check out the Parent Plugin of this plugin- =
 
 🔥 **[b Blocks](https://bblockswp.com/)** – Best gutenberg blocks collections for WordPress.
 
@@ -161,6 +161,10 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 == Changelog ==
 
+= 1.0.22 - 17 November, 2026 =
+* New: Added Black Friday / Cyber Monday promotional banner and dashboard notifications.
+* Update: Added Black Friday special discount action link and UI enhancements.
+
 = 1.0.21 - 19 August, 2026 =
 * Fix: Resolved Plugin Check (PCP) escaping, parse_url(), suppress_filters, and global-variable-prefix issues.
 
@@ -238,6 +242,9 @@ You can post your questions on the [support forum here](https://wordpress.org/su
 
 
 == Upgrade Notice ==
+
+= 1.0.22 =
+Upgrade to 1.0.22 for Black Friday promotions and latest UI improvements.
 
 = 1.0.20 - 17 August, 2026 =
 * Update: Version compatibility bump to 1.0.20.

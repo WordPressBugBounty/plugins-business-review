@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Business Reviews – build trust with real customer feedback 1.0.21\n"
+"Project-Id-Version: Business Reviews – build trust with real customer feedback 1.0.22\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/business-review\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-19T13:29:47+00:00\n"
+"POT-Creation-Date: 2026-11-17T03:55:40+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: business-review\n"
@@ -55,7 +55,6 @@ msgstr ""
 #: business-review/includes/custom-post.php:23
 #: includes/custom-post.php:22
 #: includes/custom-post.php:23
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Business Review"
 msgstr ""
@@ -118,13 +117,45 @@ msgid "Go Pro!"
 msgstr ""
 
 #: business-review/index.php:88
-#: index.php:88
+#: index.php:99
 msgid "Docs & FAQs"
 msgstr ""
 
 #: business-review/index.php:91
-#: index.php:91
+#: index.php:102
 msgid "Demos"
+msgstr ""
+
+#: includes/BFCMNotice.php:271
+msgid "Business Reviews' Biggest Black Friday Sale is Live – Up to 45% OFF!"
+msgstr ""
+
+#: includes/BFCMNotice.php:274
+msgid "The biggest deal of the year just arrived early! This is your once-a-year opportunity to upgrade to Business Reviews Pro at an exclusive price. Unlock multi-platform reviews from Google, Facebook, Yelp, and Trustpilot with schema markup to build instant trust and boost conversions!"
+msgstr ""
+
+#: includes/BFCMNotice.php:277
+msgid "Google & Facebook Reviews"
+msgstr ""
+
+#: includes/BFCMNotice.php:278
+msgid "Yelp & Trustpilot Integration"
+msgstr ""
+
+#: includes/BFCMNotice.php:279
+msgid "SEO Review Schema Markup"
+msgstr ""
+
+#: includes/BFCMNotice.php:280
+msgid "Badge & Grid Layouts"
+msgstr ""
+
+#: includes/BFCMNotice.php:287
+msgid "Unlock PRO Features →"
+msgstr ""
+
+#: index.php:86
+msgid "Black Friday: Save 45%!"
 msgstr ""
 
 #: assets/js/admin.js:7
@@ -132,387 +163,310 @@ msgstr ""
 msgid "Copied Successfully!"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Default (let Google choose)"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Facebook"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Remove Authorization"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Connect your Facebook Page by clicking the button below."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Get Help"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Login with facebook"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Google"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Google Place API Key"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Google Place ID"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Review Language"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Reviews will be translated into this language by Google."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Google returns reviews written in this language, untranslated. Leave as Default to let Google decide, which usually shows the English reviews."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Translate reviews to the selected language"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "When on, Google translates every review into the language chosen above. When off, reviews are shown in their original language."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Yelp"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid " Yelp API Key"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Yelp Business URL"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Save Information"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Authorization Or Access Token Required"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Connect your Google, Facebook, or Yelp account by adding an API key to start displaying your reviews."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Configure Api Key"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Slide"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Flip"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Zoom"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Bounce"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Top Left"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Top Right"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Top Center"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Bottom Left"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Bottom Right"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Bottom Center"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Default"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Grid 1"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Grid 2"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Grid 3"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "General"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Style"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Review Type"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Top Position"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Middle"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Bottom"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Clear Cache"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "The Business Reviews plugin caches data from Google, Facebook, and Yelp to improve loading speed. Once enabled, you can clear the cache anytime to fetch the latest reviews."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Toast"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Add a notification toast to your website that displays new reviews as they come in. This helps to show social proof and encourage more people to leave reviews.(Toast Position, Toast Duration, Toast Animation)"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Elements"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Image"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Name"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Time"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Icon"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Ratting"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Review Text"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Review Text Limit option is available in the Premium version."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Layouts"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Select Layout"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Columns:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Column Gap:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Row Gap:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Layout Grid 4, Masonry, Carousel and Toast options is available in the Premium version."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Wrapper"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Background:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Padding"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Card"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Header background:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Border"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Radius:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Shadow:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Hover Shadow:"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Quote Icon"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Color"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Hover Color"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Typography options are available in the Premium version."
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Rating Icon"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Posted On"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Text Color"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Author Color"
 msgstr ""
 
-#: build/index.js:1
 #: business-review/build/index.js:1
 msgid "Show Text"
 msgstr ""
